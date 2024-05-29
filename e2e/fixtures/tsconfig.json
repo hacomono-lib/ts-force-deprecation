@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "ts-force-deprecation",
+        "deprecations": [
+          "lodash",
+          {
+            "name": "moment",
+            "target": "Moment"
+          }
+        ]
+      }
+    ]
+  }
+}
