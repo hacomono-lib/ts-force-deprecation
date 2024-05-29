@@ -1,0 +1,36 @@
+{
+  "name": "ts-force-deprecation",
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "yarn@4.2.2",
+  "volta": {
+    "node": "20.14.0",
+    "yarn": "4.2.2"
+  },
+  "scripts": {
+    "dev": "vitest --ui --coverage --typecheck",
+    "build": "yarn clear & jiti build.ts",
+    "test": "yarn test:spec & yarn test:type",
+    "test:spec": "vitest --run --typecheck --coverage",
+    "test:type": "tsc --noEmit -p tsconfig.json",
+    "preview": "",
+    "clear": "rm -rf dist",
+    "format": "biome format --write .",
+    "lint": "biome check --apply ."
+  },
+  "dependencies": {
+    "typescript-template-language-service-decorator": "^2.3.2",
+    "vscode-languageserver-textdocument": "^1.0.11",
+    "vscode-languageserver-types": "^3.17.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  }
+}
