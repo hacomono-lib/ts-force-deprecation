@@ -1,0 +1,1 @@
+# ts-force-deprecation
