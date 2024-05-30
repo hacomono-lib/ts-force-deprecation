@@ -2,15 +2,14 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
 
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
 
+    "noEmit": true,
     "composite": false,
-    "declaration": true,
-    "declarationMap": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
@@ -34,5 +33,6 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "useDefineForClassFields": true
-  }
+  },
+  "exclude": ["node_modules", "test", "e2e"],
 }

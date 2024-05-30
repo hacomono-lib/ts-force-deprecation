@@ -2,12 +2,12 @@ import { decorateWithTemplateLanguageService } from 'typescript-template-languag
 import type * as ts from 'typescript/lib/tsserverlibrary'
 import type { Declaration, LanguageService, SourceFile, TypeChecker } from 'typescript/lib/tsserverlibrary'
 import { SymbolFlags } from 'typescript/lib/tsserverlibrary'
+import { name } from '../package.json'
 
 const all = Symbol()
 
 export interface PluginOptions {
   name: 'ts-force-deprecation'
-  tags?: string[]
 
   /**
    * List of deprecations to enforce.
@@ -146,7 +146,7 @@ export default defineTypeScriptPlugin((mod) => ({
         },
       },
       {
-        tags: (info.config.options as PluginOptions).tags ?? ['ts-force-deprecation'],
+        tags: [name],
       },
     )
   },
